@@ -54,6 +54,7 @@ public class AuthController extends AbstractController {
                                   HttpServletRequest request,
                                   HttpServletResponse response) {
         Integer error_count = cache.get("login_error_count");
+        System.out.println(username+password);
         try {
             UserVo userVo = userService.login(username, password);
             request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, userVo);

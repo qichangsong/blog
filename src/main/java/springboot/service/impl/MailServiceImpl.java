@@ -19,8 +19,10 @@ import java.io.File;
 /**
  * @author janti
  * @date 2018/5/3 22:07
+ * 邮箱的服务
  */
-@Component
+//@Component
+    /*
 public class MailServiceImpl implements IMailService {
 
     @Autowired
@@ -39,7 +41,7 @@ public class MailServiceImpl implements IMailService {
      * @param to
      * @param subject
      * @param content
-     */
+     *
     @Override
     public void sendSimpleEmail(String to,String subject,String content) {
         SimpleMailMessage message = new SimpleMailMessage();
@@ -56,7 +58,7 @@ public class MailServiceImpl implements IMailService {
      * @param to
      * @param subject
      * @param content
-     */
+     *
     @Override
     public void sendHtmlMail(String to, String subject, String content) {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
@@ -79,7 +81,7 @@ public class MailServiceImpl implements IMailService {
      * @param subject
      * @param content
      * @param filepath
-     */
+     *
     @Override
     public void sendFileMail(String to, String subject, String content, String filepath) {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
@@ -102,3 +104,4 @@ public class MailServiceImpl implements IMailService {
     }
 
 }
+*/

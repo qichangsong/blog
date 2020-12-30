@@ -24,12 +24,12 @@ public class ScheduleTask {
 
     @Resource
     ILogService logService;
+//这里是向邮箱里推送使用情况
+  //  @Resource
+  //  IMailService mailService;
 
-    @Resource
-    IMailService mailService;
-
-    @Value("${spring.mail.username}")
-    private String mailTo;
+ //   @Value("${spring.mail.username}")
+ //   private String mailTo;
 
     @Scheduled(fixedRate = 86400000)
     public void process(){
@@ -43,7 +43,7 @@ public class ScheduleTask {
             result.append(" 操作: ").append(logVo.getAction());
             result.append(" IP： ").append(logVo.getIp()).append("\n");
         }
-        mailService.sendSimpleEmail(mailTo,"博客系统运行情况",result.toString());
+    //    mailService.sendSimpleEmail(mailTo,"博客系统运行情况",result.toString());
     }
 
     public static String getMemery() {

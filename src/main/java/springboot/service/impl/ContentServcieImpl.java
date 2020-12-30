@@ -196,8 +196,8 @@ public class ContentServcieImpl implements IContentService {
 
         contentDao.updateByPrimaryKeySelective(contents);
         // 更新缓存
-        String contentKey  = RedisKeyUtil.getKey(ContentKey.TABLE_NAME, ContentKey.MAJOR_KEY, contents.getSlug());
-        redisService.deleteKey(contentKey);
+     //   String contentKey  = RedisKeyUtil.getKey(ContentKey.TABLE_NAME, ContentKey.MAJOR_KEY, contents.getSlug());
+     //   redisService.deleteKey(contentKey);
 
         relationshipService.deleteById(cid, null);
         metasService.saveMetas(cid, contents.getTags(), Types.TAG.getType());
