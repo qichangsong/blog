@@ -52,10 +52,12 @@ public class UserServiceImpl implements IUserService {
         UserVoExample.Criteria criteria = example.createCriteria();
         criteria.andUsernameEqualTo(username);
         long count = userDao.countByExample(example);
+        System.out.println("当前查询到结果集的数量是"+count);
         if (count < 1) {
             throw new TipException("不存在该用户");
         }
         String pwd = MyUtils.MD5encode(username + password);
+        System.out.println(pwd);
         criteria.andPasswordEqualTo(pwd);
         List<UserVo> userVoList = userDao.selectByExample(example);
         if (userVoList.size() != 1) {

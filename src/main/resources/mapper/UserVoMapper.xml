@@ -193,7 +193,7 @@
   <select id="countByExample" parameterType="springboot.modal.vo.UserVoExample" resultType="java.lang.Long">
     select count(*) from t_users
     <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
+      <!--<include refid="Example_Where_Clause" />-->
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
